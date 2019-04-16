@@ -11,7 +11,11 @@ const VideoItem = ({ video, onVideoSelect }) => {
         onVideoSelect(video);
       }}
     >
-      <img className="ui image" alt="" src={video.snippet.thumbnails.medium.url} />
+      <img
+        className="ui image"
+        alt={video.snippet.title}
+        src={video.snippet.thumbnails.medium.url}
+      />
       <div className="content">
         <div className="header">{decodeHTML(video.snippet.title)}</div>
       </div>
